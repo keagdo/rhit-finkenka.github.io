@@ -1,0 +1,89 @@
+:root {
+    --light-color: #FCFC7C;
+    --dark-color: #FCAC88;
+}
+
+/* font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
+
+
+body {
+    display: grid;
+    grid-template-columns: 14em 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 0px 0px;
+    grid-template-areas:
+        "head main"
+        "nav main"
+        "nav foot";
+    padding: 2rem;
+    background-image: linear-gradient(47deg, rgba(149, 149, 149, 0.05) 0%, rgba(149, 149, 149, 0.05) 33.333%, rgba(228, 228, 228, 0.05) 33.333%, rgba(228, 228, 228, 0.05) 66.666%, rgba(55, 55, 55, 0.05) 66.666%, rgba(55, 55, 55, 0.05) 99.999%), linear-gradient(331deg, rgba(179, 179, 179, 0.05) 0%, rgba(179, 179, 179, 0.05) 33.333%, rgba(71, 71, 71, 0.05) 33.333%, rgba(71, 71, 71, 0.05) 66.666%, rgba(97, 97, 97, 0.05) 66.666%, rgba(97, 97, 97, 0.05) 99.999%), linear-gradient(155deg, rgba(77, 77, 77, 0.05) 0%, rgba(77, 77, 77, 0.05) 33.333%, rgba(176, 176, 176, 0.05) 33.333%, rgba(176, 176, 176, 0.05) 66.666%, rgba(114, 114, 114, 0.05) 66.666%, rgba(114, 114, 114, 0.05) 99.999%), linear-gradient(263deg, rgba(102, 102, 102, 0.05) 0%, rgba(102, 102, 102, 0.05) 33.333%, rgba(218, 218, 218, 0.05) 33.333%, rgba(218, 218, 218, 0.05) 66.666%, rgba(47, 47, 47, 0.05) 66.666%, rgba(47, 47, 47, 0.05) 99.999%), linear-gradient(247deg, rgba(46, 46, 46, 0.05) 0%, rgba(46, 46, 46, 0.05) 33.333%, rgba(144, 144, 144, 0.05) 33.333%, rgba(144, 144, 144, 0.05) 66.666%, rgba(26, 26, 26, 0.05) 66.666%, rgba(26, 26, 26, 0.05) 99.999%), linear-gradient(302deg, rgba(71, 71, 71, 0.05) 0%, rgba(71, 71, 71, 0.05) 33.333%, rgba(80, 80, 80, 0.05) 33.333%, rgba(80, 80, 80, 0.05) 66.666%, rgba(43, 43, 43, 0.05) 66.666%, rgba(43, 43, 43, 0.05) 99.999%), linear-gradient(313deg, rgba(111, 111, 111, 0.05) 0%, rgba(111, 111, 111, 0.05) 33.333%, rgba(185, 185, 185, 0.05) 33.333%, rgba(185, 185, 185, 0.05) 66.666%, rgba(61, 61, 61, 0.05) 66.666%, rgba(61, 61, 61, 0.05) 99.999%), linear-gradient(162deg, rgba(128, 128, 128, 0.05) 0%, rgba(128, 128, 128, 0.05) 33.333%, rgba(250, 250, 250, 0.05) 33.333%, rgba(250, 250, 250, 0.05) 66.666%, rgba(72, 72, 72, 0.05) 66.666%, rgba(72, 72, 72, 0.05) 99.999%), linear-gradient(90deg, rgb(187, 124, 252), rgb(253, 253, 150));
+}
+
+@font-face {
+    font-family: "Lobster";
+    src: url("Lobster.otf");
+}
+
+@font-face {
+    font-family: "Oswald-Light";
+    src: url("Oswald-Light.ttf");
+}
+@font-face {
+    font-family: "Oswald-DemiBoldItalic";
+    src: url("Oswald-Demi-BoldItalic.ttf");
+}
+body {
+    font-family: "Oswald-Light";
+}
+h1 {
+    font-family: "Lobster";
+}
+h2 {
+    font-family: "Oswald-DemiBoldItalic";
+}
+
+
+body>header {
+    grid-area: head;
+    font-size: 20;
+}
+
+body>nav {
+    grid-area: nav;
+    font-size: 18;
+}
+
+body>main {
+    grid-area: main;
+    padding: 0 1rem;
+    background-color: var(--dark-color);
+    font-size: 20;
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+h3 {
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+div {
+    margin-left: 40px;
+}
+
+@media only screen and (max-width: 36rem) {
+    body {
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "head head"
+            "nav nav"
+            "main main"
+            "foot foot";
+    }
+}
